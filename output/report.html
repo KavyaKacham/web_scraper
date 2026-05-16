@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Web Scraper Report</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: 'Segoe UI', sans-serif; background: #0f172a; color: #e2e8f0; }
+    header { background: linear-gradient(135deg,#1e3a5f,#0ea5e9); padding: 2rem 3rem; }
+    header h1 { font-size: 2rem; font-weight: 700; letter-spacing: 1px; }
+    header p  { color: #bae6fd; margin-top: .4rem; font-size: .9rem; }
+    main { max-width: 1100px; margin: 2rem auto; padding: 0 1.5rem; }
+    h2 { font-size: 1.3rem; color: #38bdf8; border-left: 4px solid #0ea5e9;
+          padding-left: .75rem; margin: 2rem 0 1rem; }
+    .cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(170px,1fr)); gap: 1rem; }
+    .card  { background: #1e293b; border-radius: 10px; padding: 1.2rem; text-align: center; }
+    .card .val  { font-size: 2rem; font-weight: 700; color: #38bdf8; }
+    .card .lbl  { font-size: .78rem; color: #94a3b8; margin-top: .3rem; }
+    table { width: 100%; border-collapse: collapse; background: #1e293b;
+             border-radius: 8px; overflow: hidden; }
+    th { background: #0f3460; color: #7dd3fc; font-size: .8rem; text-align: left;
+          padding: .6rem 1rem; }
+    td { padding: .55rem 1rem; font-size: .82rem; border-bottom: 1px solid #334155; }
+    tr:last-child td { border-bottom: none; }
+    tr:hover td { background: #263148; }
+    .bar-row   { display: flex; align-items: center; gap: .7rem; margin: .4rem 0; }
+    .bar-label { width: 90px; font-size: .82rem; color: #fbbf24; }
+    .bar-track { flex: 1; background: #334155; border-radius: 4px; height: 14px; }
+    .bar-fill  { background: #0ea5e9; height: 100%; border-radius: 4px;
+                  transition: width .5s ease; }
+    .bar-count { width: 40px; text-align: right; font-size: .8rem; color: #94a3b8; }
+    footer { text-align: center; padding: 2rem; color: #475569; font-size: .8rem; }
+  </style>
+</head>
+<body>
+<header>
+  <h1>🕷️ Smart Web Scraper — Data Report</h1>
+  <p>Generated: 2026-05-16 09:49:57 &nbsp;|&nbsp;
+     Sources: books.toscrape.com &amp; realpython.github.io/fake-jobs</p>
+</header>
+
+<main>
+
+  <!-- ── BOOKS ─────────────────────────────────── -->
+  <h2>📚 Books Dataset</h2>
+
+  <div class="cards">
+    <div class="card"><div class="val">999</div>
+      <div class="lbl">Total Books</div></div>
+    <div class="card"><div class="val">50</div>
+      <div class="lbl">Pages Scraped</div></div>
+    <div class="card"><div class="val">£35.07</div>
+      <div class="lbl">Avg Price</div></div>
+    <div class="card"><div class="val">£10.00</div>
+      <div class="lbl">Cheapest</div></div>
+    <div class="card"><div class="val">£59.99</div>
+      <div class="lbl">Most Expensive</div></div>
+    <div class="card"><div class="val">2.9★</div>
+      <div class="lbl">Avg Rating</div></div>
+    <div class="card"><div class="val">999</div>
+      <div class="lbl">In Stock</div></div>
+  </div>
+
+  <h2>⭐ Rating Distribution</h2>
+  <div style="background:#1e293b;border-radius:10px;padding:1.2rem 1.5rem;">
+    
+            <div class="bar-row">
+              <span class="bar-label">★☆☆☆☆</span>
+              <div class="bar-track"><div class="bar-fill" style="width:100%"></div></div>
+              <span class="bar-count">226</span>
+            </div>
+            <div class="bar-row">
+              <span class="bar-label">★★☆☆☆</span>
+              <div class="bar-track"><div class="bar-fill" style="width:86%"></div></div>
+              <span class="bar-count">196</span>
+            </div>
+            <div class="bar-row">
+              <span class="bar-label">★★★☆☆</span>
+              <div class="bar-track"><div class="bar-fill" style="width:89%"></div></div>
+              <span class="bar-count">203</span>
+            </div>
+            <div class="bar-row">
+              <span class="bar-label">★★★★☆</span>
+              <div class="bar-track"><div class="bar-fill" style="width:79%"></div></div>
+              <span class="bar-count">179</span>
+            </div>
+            <div class="bar-row">
+              <span class="bar-label">★★★★★</span>
+              <div class="bar-track"><div class="bar-fill" style="width:86%"></div></div>
+              <span class="bar-count">195</span>
+            </div>
+  </div>
+
+  <h2>🏆 Top Rated Books</h2>
+  <table>
+    <thead><tr><th>Title</th><th>Price</th><th>Rating</th><th>Availability</th></tr></thead>
+    <tbody><tr><td>An Abundance of Katherines</td><td>£10.00</td><td>★★★★★</td><td>In stock</td></tr><tr><td>Greek Mythic History</td><td>£10.23</td><td>★★★★★</td><td>In stock</td></tr><tr><td>The Power Greens Cookbook: 140 Delicious Superfood Reci…</td><td>£11.05</td><td>★★★★★</td><td>In stock</td></tr><tr><td>Dear Mr. Knightley</td><td>£11.21</td><td>★★★★★</td><td>In stock</td></tr><tr><td>The Darkest Corners</td><td>£11.33</td><td>★★★★★</td><td>In stock</td></tr></tbody>
+  </table>
+
+  <h2>💰 Cheapest Books</h2>
+  <table>
+    <thead><tr><th>Title</th><th>Price</th><th>Rating</th><th>Availability</th></tr></thead>
+    <tbody><tr><td>An Abundance of Katherines</td><td>£10.00</td><td>★★★★★</td><td>In stock</td></tr><tr><td>The Origin of Species</td><td>£10.01</td><td>★★★★☆</td><td>In stock</td></tr><tr><td>The Tipping Point: How Little Things Can Make a Big Dif…</td><td>£10.02</td><td>★★☆☆☆</td><td>In stock</td></tr><tr><td>Patience</td><td>£10.16</td><td>★★★☆☆</td><td>In stock</td></tr><tr><td>Greek Mythic History</td><td>£10.23</td><td>★★★★★</td><td>In stock</td></tr></tbody>
+  </table>
+
+  <!-- ── JOBS ──────────────────────────────────── -->
+  <h2>💼 Jobs Dataset</h2>
+
+  <div class="cards">
+    <div class="card"><div class="val">100</div>
+      <div class="lbl">Total Jobs</div></div>
+    <div class="card"><div class="val">1</div>
+      <div class="lbl">Pages Scraped</div></div>
+    <div class="card">
+      <div class="val">5</div>
+      <div class="lbl">Unique Companies</div></div>
+  </div>
+
+  <h2>🕒 Recent Job Postings</h2>
+  <table>
+    <thead><tr><th>Title</th><th>Company</th><th>Location</th><th>Date Posted</th></tr></thead>
+    <tbody><tr><td>Senior Python Developer</td><td>Payne, Roberts and Davis</td><td>Stewartbury, Aa</td><td>2021-04-08</td></tr><tr><td>Energy engineer</td><td>Vasquez-Davidson</td><td>Christopherville, Aa</td><td>2021-04-08</td></tr><tr><td>Legal executive</td><td>Jackson, Chambers and Levy</td><td>Port Ericaburgh, Aa</td><td>2021-04-08</td></tr><tr><td>Fitness centre manager</td><td>Savage-Bradley</td><td>East Seanview, Ap</td><td>2021-04-08</td></tr><tr><td>Product manager</td><td>Ramirez Inc</td><td>North Jamieview, Ap</td><td>2021-04-08</td></tr></tbody>
+  </table>
+
+  <h2>🏢 Top Hiring Companies</h2>
+  <table>
+    <thead><tr><th>Company</th><th>Listings</th></tr></thead>
+    <tbody>
+      <tr><td>Garcia PLC</td><td>2</td></tr><tr><td>Payne, Roberts and Davis</td><td>1</td></tr><tr><td>Vasquez-Davidson</td><td>1</td></tr><tr><td>Jackson, Chambers and Levy</td><td>1</td></tr><tr><td>Savage-Bradley</td><td>1</td></tr>
+    </tbody>
+  </table>
+
+</main>
+<footer>Smart Web Scraper &copy; 2026 — Data extracted for educational purposes.</footer>
+</body>
+</html>
